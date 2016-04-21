@@ -1,14 +1,14 @@
-import React from "react";
-import ReactDom from "react-dom";
+var React = require("react");
+var ReactDom = require("react-dom");
 
-class TypeaHead extends React.component {
-	render() {
+var TypeaHead = React.createClass({
+	render: function() {
 		return (
 			<div>TypeAHead</div>
 		);
 	}
-}
+});
 
-function render(elem,  payload) {
+module.exports = function render(elem,  payload) {
 	ReactDom.render(<TypeaHead></TypeaHead>, elem);
 }
