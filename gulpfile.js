@@ -26,11 +26,16 @@ gulp.task('copyHtml', ['copyIndex'], function() {
 
 
 gulp.task("copyCSS", function() {
-    gulp.src("./app/**/*.css").pipe(gulp.dest("./dist/css"));
+    gulp.src("./app/**/*.css").pipe(gulp.dest("./dist"));
 	console.log("Copied all css files");
 });
 
-gulp.task('copy', ['copyHtml', 'copyCSS'], function() {
+gulp.task("copyImages", function() {
+    gulp.src("./app/img/*").pipe(gulp.dest("./dist/img"));
+	console.log("Copied all images files");
+});
+
+gulp.task('copy', ['copyHtml', 'copyCSS', 'copyImages'], function() {
 	console.log("Coping files is completed...");
 });
 

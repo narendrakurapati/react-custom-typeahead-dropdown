@@ -1,0 +1,97 @@
+/* tah: typeahead */
+.tah-wrpr {
+	position: relative;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 42px;
+}
+
+.tah {
+	display: inline-block;
+    margin: 0px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tah input {
+	border: 2px solid #ACBA31;
+	border-radius: 6px;
+    padding: 0px 17px;
+    height: 43px;
+	width: 100%;
+	font-size: 20px;
+	color: #58585a;
+	line-height: 20px !important;
+}
+
+.tah .input-search {
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.tah .dropdown-icon {
+	background: url(../img/selectBoxIcon.svg) no-repeat right top;
+    background-size: 100% 100%;
+	background-color: #ACBA31;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 43px;
+    width: 46px;
+}
+
+.tah .drpdwn-lst {
+    margin: 0;
+    padding: 17px 0px 10px 0px;
+    border: 2px solid #ACBA31;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 0 0 6px 6px;
+    border-top: none;
+    left: 0;
+    right: 0;
+    margin-top: -4px;
+    background: #fff;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.tah .drpdwn-lst::after {
+    border-top: 2px solid #acba31;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    top: 0;
+}
+
+.tah .drpdwn-lst-itm {
+    margin: 0;
+    list-style: none;
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-size: 20px;
+    color: #58585a;
+    cursor: pointer;
+}
+
+.tah .drpdwn-lst-itm.active {
+	background: #acba31;
+    color: #fff;
+}
+.tah .drpdwn-lst-itm:hover {
+	background: #f1f1f1;
+	color: #58585a;
+}
+
+.tah .drpdwn-lst-itm a {
+    width: 100%;
+    display: block;
+    padding: 5px 10px;
+}
