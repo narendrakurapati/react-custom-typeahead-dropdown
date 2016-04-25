@@ -15,17 +15,38 @@ var InputField = React.createClass({
 	},
 	
 	validateInput: function(e) {
-		var value = this.refs.input.value;
-		this.updateValue(value);
-		this.onChange(value);
+		//Need to check whether it allows number or not
+		e = e || window.event;
+		var key = e.key;
+		var code = e.which || e.keyCode;
+		key = String.fromCharCode(code).trim();
+		
+		var regex = this.props.data.allowedChars;
+		
+		if (!regex || code == 8 || code == 46 || (regex && key.match(regex))) {
+			this.validInput = true;
+		} else if (code == 9 || code == 38 || code == 40) {
+			//@TODO: Need to handle tab, up-arrow & down-arrow
+			//Need to change the hilight element in the list.. to handle keyboard events
+			this.validInput = false;
+		} else {
+			this.validInput = false;
+		}
+	},
+	
+	onChange: function(e){
+		if(this.validInput) {
+			var value = this.refs.input.value;
+			this.updateValue(value);
+			this.props.data.onChange(value);
+		}
 	},
 	
 	render: function() {
 		var props = this.props.data;
 		this.onClick = props.onClick;
-		this.onChange = props.onChange;
 		return (
-			<input type="text" onClick={this.onClick} className="input-search" placeholder={props.placeholder} value={this.state.value} title={props.title} onKeydown={this.validateInput} ref="input" />
+			<input type="text" onClick={this.onClick} className="input-search" placeholder={props.placeholder} value={this.state.value} title={props.title} onKeyDown={this.validateInput} ref="input" onChange={this.onChange}/>
 		);
 	},
 	
@@ -105,9 +126,9 @@ var TypeaHead = React.createClass({
 		var key = this.nameToRender;
 		var filteredList = undefined;
 		if (value) {
-			value = value.toLowerCase();
+			var newValue = value.toLowerCase();
 			filteredList = this.items.filter(function(item){
-				return (item[key].toLowerCase().indexOf(value) !== -1);
+				return (item[key].toLowerCase().indexOf(newValue) !== -1);
 			});
 		} else {
 			filteredList = this.items;
@@ -132,11 +153,12 @@ var TypeaHead = React.createClass({
 			'title': data.title,
 			'placeholder': data.placeHolder,
 			'value': this.state.value, //data.selectedItem[data.nameToRender],
+			'allowedChars': data.allowedChars,
 			'onClick': this.toggleDropdown,
 			'onChange': this.filterList
 		}
 		var ddData = {
-			'items': data.items,
+			'items': this.state.filteredList,
 			'idToRender': data.idToRender,
 			'nameToRender': data.nameToRender,
 			'onSelect': this.handleItemSelect,

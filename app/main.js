@@ -24,7 +24,7 @@ var data = {
 	'selectCallback':selectCallback,
 	'idToRender': 'id', //Id to render in list for item
 	'nameToRender': 'description', //Name to render in list for item
-	'allowNumbersOnly': true,
+	'allowedChars': null, // /\d/, //RegEx for restricting characters to enter
 	'isDisabled': false
 }
 
