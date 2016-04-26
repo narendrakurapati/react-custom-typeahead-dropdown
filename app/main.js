@@ -16,14 +16,14 @@ var listItems = [{
 var data = {
 	'title': "Title",
 	'placeHolder': "PlaceHolder",
-	'selectedItem': {
-		"id" : "2",
-		"description" : "Second Hand"
-	},
 	'items': listItems,
-	'selectCallback':selectCallback,
 	'idToRender': 'id', //Id to render in list for item
 	'nameToRender': 'description', //Name to render in list for item
+	'selectedItem': {
+		//"id" : "2",
+		//"description" : "Second Hand"
+	},
+	'selectCallback':selectCallback,
 	'allowedChars': null, // /\d/, //RegEx for restricting characters to enter
 	'isDisabled': false
 }
