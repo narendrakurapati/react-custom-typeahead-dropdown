@@ -77,3 +77,4 @@ It will return selected element to a callback function. The object looks as foll
 
 # Todos
 - Need to make css as easy customizable
+- Need to add keyboard navigation
