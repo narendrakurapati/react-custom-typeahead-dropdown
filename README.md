@@ -8,20 +8,31 @@ It is developed using:
 - broswerify 
 
 It looks like as follows in different scenarios:
+
 **Initial State**
+
 ![Initial](./images/1initial.png)
 
+
 **Open State**
+
 ![Open](./images/2open.png)
 
+
 **Selection State**
+
 ![Selection](./images/3selection.png)
 
+
 **Selection & Open State**
+
 ![Selection & Open](./images/4open-selection.png)
 
+
 **Filter State **
+
 ![Filter](./images/5filter.png)
+
 
 # Usage
 Currently, It will support to use with broswerify.
