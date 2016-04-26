@@ -29,7 +29,7 @@ It looks like as follows in different scenarios:
 ![Selection & Open](./images/4open-selection.png)
 
 
-**Filter State **
+**Filter State**
 
 ![Filter](./images/5filter.png)
 
