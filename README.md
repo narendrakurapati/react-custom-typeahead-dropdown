@@ -11,27 +11,27 @@ It looks like as follows in different scenarios:
 
 **Initial State**
 
-![Initial](https://github.com/narendrakurapati/react-custom-typeahead-dropdown/blob/master/images/1initial.png)
+![Initial](https://raw.githubusercontent.com/narendrakurapati/react-custom-typeahead-dropdown/master/images/1initial.png)
 
 
 **Open State**
 
-![Open](https://github.com/narendrakurapati/react-custom-typeahead-dropdown/blob/master/images/2open.png)
+![Open](https://raw.githubusercontent.com/narendrakurapati/react-custom-typeahead-dropdown/master/images/2open.png)
 
 
 **Selection State**
 
-![Selection](https://github.com/narendrakurapati/react-custom-typeahead-dropdown/blob/master/images/3selection.png)
+![Selection](https://raw.githubusercontent.com/narendrakurapati/react-custom-typeahead-dropdown/master/images/3selection.png)
 
 
 **Selection & Open State**
 
-![Selection & Open](https://github.com/narendrakurapati/react-custom-typeahead-dropdown/blob/master/images/4open-selection.png)
+![Selection & Open](https://raw.githubusercontent.com/narendrakurapati/react-custom-typeahead-dropdown/master/images/4open-selection.png)
 
 
 **Filter State**
 
-![Filter](https://github.com/narendrakurapati/react-custom-typeahead-dropdown/blob/master/images/5filter.png)
+![Filter](https://raw.githubusercontent.com/narendrakurapati/react-custom-typeahead-dropdown/master/images/5filter.png)
 
 
 # Usage
