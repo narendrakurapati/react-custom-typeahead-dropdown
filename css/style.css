@@ -1,0 +1,126 @@
+#dropdown {
+	height: 43px;
+}
+
+/* tah: typeahead */
+.tah-wrpr {
+	position: relative;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tah {
+	display: inline-block;
+    margin: 0px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tah input {
+	border: 2px solid #00bcd4;
+	border-radius: 6px;
+    padding: 0px 17px;
+    height: 100%;
+	width: 100%;
+	font-size: 20px;
+	color: #58585a;
+	line-height: 20px !important;
+	outline: none;
+}
+
+.tah .input-search {
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.tah .dropdown-icon {
+	background-color: #00bcd4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 46px;
+	border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.tah .dropdown-icon:after, .tah .dropdown-icon:before {
+	top: 50%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tah .dropdown-icon:after {
+	border-top-color: #00bcd4;
+    border-width: 10px;
+    margin-left: -10px;
+    margin-top: -5px;
+}
+.tah .dropdown-icon:before {
+	border-top-color: #fff;
+    border-width: 14px;
+    margin-left: -14px;
+    margin-top: -5px;
+}
+
+.tah .drpdwn-lst {
+    margin: 0;
+    padding: 17px 0px 10px 0px;
+    border: 2px solid #00bcd4;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 0 0 6px 6px;
+    border-top: none;
+    left: 0;
+    right: 0;
+    margin-top: -4px;
+    background: #fff;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.tah .drpdwn-lst::after {
+    border-top: 2px solid #00bcd4;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    top: 0;
+}
+
+.tah .drpdwn-lst-itm {
+    margin: 0;
+    list-style: none;
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-size: 20px;
+    color: #58585a;
+    cursor: pointer;
+}
+
+.tah .drpdwn-lst-itm.active {
+	background: #00bcd4;
+    color: #fff;
+}
+.tah .drpdwn-lst-itm:hover {
+	background: #f1f1f1;
+	color: #58585a;
+}
+
+.tah .drpdwn-lst-itm a {
+    width: 100%;
+    display: block;
+    padding: 5px 10px;
+}
